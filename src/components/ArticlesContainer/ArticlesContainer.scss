@@ -1,5 +1,6 @@
 .articles{
-  &__container{
-    
+  &__add-button,
+  &__add-button > *{
+    width: 100%;
   }
 }

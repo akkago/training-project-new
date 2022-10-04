@@ -1,0 +1,15 @@
+.add-article-page{
+    display: flex;
+        flex-direction: column;
+        padding: 40px;
+    &__item{
+        display: flex;
+        width: 100%;
+    }
+    &__item > div {
+        width: 100%;
+    }
+    &__save-button{
+        margin-right: 24px;
+    }
+}

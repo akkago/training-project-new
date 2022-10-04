@@ -7,15 +7,20 @@ import './SearchPanel.scss';
 export default function SearchPanel() {
     return (
         <Box
-            className='search-panel__container'
+            className='search-panel'
             component="form"
-            sx={{
-                '& > :not(style)': { m: 1, width: '35ch' },
-            }}
+            // sx={{
+            //     '& > :not(style)': { m: 1, width: '35ch' },
+            // }}
             noValidate
             autoComplete="off"
         >
-            <TextField id="outlined-basic" label="Поиск..." variant="outlined" />
+            <TextField
+                id="outlined-basic"
+                label="Поиск..."
+                variant="outlined"
+                className='search-panel__search-input'
+            />
             <BasicDateRangePicker />
         </Box>
     );

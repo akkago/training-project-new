@@ -1,24 +1,23 @@
-import { Pagination } from '@mui/material';
 import './App.css';
-import ArticlesContainer from './components/ArticlesContainer/ArticlesContainer';
-import ArticleView from './components/ArticleView/ArticleView';
-import SearchPanel from './components/SearchPanel/SearchPanel';
-import mock from './mock/mock';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
+import MainPage from './containers/MainPage/MainPage';
+import AddArticlePage from './containers/AddArticlePage/AddArticlePage';
+import ArticlePage from './containers/ArticlePage/ArticlePage';
+import Navigation from './Navigation';
 
 function App() {
-  const views = mock.articles.map((a) => (
-    <ArticleView
-      key={a.id}
-      article={a}
-    />
-  ));
-
   return (
-    <div className="App">
-      <SearchPanel />
-      <ArticlesContainer />
-      <Pagination count={10} />
-    </div>
+    <Router>
+      <Routes>
+        <Route path={Navigation.Article} element={<ArticlePage />} />
+        <Route path={Navigation.AddArticle} element={<AddArticlePage />} />
+        <Route exact path={Navigation.Main} element={<MainPage />} />
+      </Routes>
+    </Router>
   );
 }
 
