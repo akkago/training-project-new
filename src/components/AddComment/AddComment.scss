@@ -1,0 +1,17 @@
+.add-comment{
+    display: flex;
+    flex-direction: column;
+    &__item{
+        width: 100%;
+    }
+    &__item-content{
+        width: 100%;
+        min-height: 260px;
+        margin-top: 16px;
+    }
+    &__button{
+        width: 200px;
+        margin-top: 16px;
+        margin-left: auto;
+    }
+}
